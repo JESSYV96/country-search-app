@@ -1,0 +1,7 @@
+{
+  "name": "clean-archi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
