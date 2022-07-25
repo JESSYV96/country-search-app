@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router';
+import { createI18n } from 'vue-i18n';
+
+import App from './ui/App.vue'
+import router from './ui/router';
 
 import { IonicVue } from '@ionic/vue';
 
@@ -20,13 +22,22 @@ import '@ionic/vue/css/text-transformation.css';
 import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
-/* Theme variables */
-import './theme/variables.css';
+/* Tailwind */
+import './ui/assets/index.css'
+
+import { translations } from './ui/translations';
+
+const i18n = createI18n({
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages: translations,
+})
 
 const app = createApp(App)
   .use(IonicVue)
-  .use(router);
-  
+  .use(router)
+  .use(i18n);
+
 router.isReady().then(() => {
   app.mount('#app');
 });

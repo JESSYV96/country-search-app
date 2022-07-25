@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Nunito-Sans-Regular";
+    src: url("./fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Nunito-Sans-Bold';
+    src: url("./fonts/Nunito_Sans/NunitoSans-Bold.ttf");
+}
+
+:root {
+    --dark-blue: #2B3945;
+    --very-dark-blue: #202C37;
+}
+
+* {
+    font-family: 'Nunito-Sans-Regular', sans-serif !default;
+}
+
